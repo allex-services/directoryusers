@@ -1,0 +1,21 @@
+{
+  "name": "allex_directoryusersservice",
+  "version": "0.1.0",
+  "description": "DirectoryUsersService",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.hers.rs:allex_services/directoryusers.git"
+  },
+  "keywords": [
+    "ecosystem:allex",
+    "Service",
+    "DirectoryUsers"
+  ],
+  "author": "HERS Belgrade",
+  "license": "ISC"
+}
+
