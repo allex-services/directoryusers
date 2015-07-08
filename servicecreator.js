@@ -22,10 +22,11 @@ function createDirectoryUsersService(execlib, ParentServicePack) {
     return ParentService.prototype.createStorage.call(this, storagedescriptor);
   };
   DirectoryUsersService.prototype.preProcessUserHash = function (userhash) {
-    if(userhash){
-      userhash.globalsettingsdirsink = this.subservices.get('project_root');
+    var ret = ParentService.prototype.preProcessUserHash.call(this,userhash);
+    if(userhash.profile){
+      userhash.profile.globalsettingsdirsink = this.subservices.get('project_root');
     }
-    return ParentService.prototype.preProcessUserHash.call(this,userhash);
+    return ret;
   };
   return DirectoryUsersService;
 }

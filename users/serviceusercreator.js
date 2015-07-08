@@ -11,6 +11,10 @@ function createServiceUser(execlib, ParentUser) {
   ServiceUser.prototype.__cleanUp = function () {
     ParentUser.prototype.__cleanUp.call(this);
   };
+  ServiceUser.prototype._onSinkAcquired = function (defer, record, sink) {
+    record.globalsettingsdirsink = null;
+    ParentUser.prototype._onSinkAcquired.call(this, defer, record, sink);
+  };
 
   return ServiceUser;
 }
